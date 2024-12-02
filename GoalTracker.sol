@@ -20,8 +20,6 @@ contract GoalTracker {
         totalReward[msg.sender] += baseReward * 5 * rewardsToBeClaimed;
     }
 
-
-
     function claimReward() public {          
         require(totalSpending[msg.sender] >= goal,GoalNotReached(totalSpending[msg.sender], goal));
         require(rewardClaimed[msg.sender] = false, RewardAlreadyClaimed());      
